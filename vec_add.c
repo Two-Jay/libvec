@@ -6,7 +6,7 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:30:50 by jekim             #+#    #+#             */
-/*   Updated: 2021/11/17 19:03:28 by jekim            ###   ########.fr       */
+/*   Updated: 2021/11/17 20:16:14 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 t_vector *vec_add(t_vector *vec1, t_vector *vec2)
 {
 	t_vector	*ret;
-	int			limit;
-	int			ix;
+	int8_t		limit;
+	int8_t		ix;
 
 	ix = 0;
 	limit = vec1->dimention;

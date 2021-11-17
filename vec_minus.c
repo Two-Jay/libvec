@@ -6,7 +6,7 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 19:03:46 by jekim             #+#    #+#             */
-/*   Updated: 2021/11/17 19:04:18 by jekim            ###   ########.fr       */
+/*   Updated: 2021/11/17 20:16:29 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 t_vector *vec_minus(t_vector *vec1, t_vector *vec2)
 {
 	t_vector	*ret;
-	int			limit;
-	int			ix;
+	int8_t		limit;
+	int8_t		ix;
 
 	ix = 0;
 	limit = vec1->dimention;

@@ -6,7 +6,7 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:30:50 by jekim             #+#    #+#             */
-/*   Updated: 2021/11/17 14:44:34 by jekim            ###   ########.fr       */
+/*   Updated: 2021/11/17 20:16:02 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_vector    *vec_create(double *param, int dimention)
 {
 	t_vector	*ret;
-	int			ix;
+	int8_t		ix;
 
 	ix = 0;
 	ret = (t_vector *)malloc(sizeof(t_vector));

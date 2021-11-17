@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec_scala_multiple.c                               :+:      :+:    :+:   */
+/*   vec_dot_product.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 14:45:10 by jekim             #+#    #+#             */
-/*   Updated: 2021/11/17 20:16:40 by jekim            ###   ########.fr       */
+/*   Created: 2021/11/17 19:48:43 by jekim             #+#    #+#             */
+/*   Updated: 2021/11/17 20:24:14 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libvec.h"
 
-t_vector *vec_scala_multiple(t_vector *vec, double x)
+int64_t		vec_dot_product(t_vector *vec1, t_vector *vec2, int8_t *errflag)
 {
-	t_vector	*ret;
-	int8_t		limit;
-	int8_t		ix;
-
-	ix = 0;
-	limit = vec->dimention;
-	ret = (t_vector *)malloc(sizeof(t_vector));
-	if (!ret)
-		return (NULL);
-	ret->param = (double *)malloc(sizeof(double) * (limit + 1));
-	if (!ret->param)
+	int64_t ret;
+	int8_t  ix;
+	
+	ix = -1;
+	ret = 0;
+	if (vec1->dimention != vec2->dimention)
 	{
-		free(ret);
-		return (NULL);
+		*errflag++;
+		return (0);
 	}
-	ret->param[limit] = '\0';
-	while (ix < limit)
-	{
-		ret->param[ix] = vec->param[ix] * x;
-		ix++;
-	}
+	while (++ix < vec1->dimention)
+		ret += vec1->param[ix] * vec2->param[ix];
 	return (ret);
 }
