@@ -6,7 +6,7 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 14:29:05 by jekim             #+#    #+#             */
-/*   Updated: 2021/11/17 14:44:50 by jekim            ###   ########.fr       */
+/*   Updated: 2021/11/17 15:13:08 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBVEC_H
 
 #include <stdlib.h>
+#include <math.h>
 
 typedef struct s_vector
 {
